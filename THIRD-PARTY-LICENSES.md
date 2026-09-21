@@ -94,8 +94,10 @@ and filtered by `build_extra_sentences.py`.
 publishes them: traditional characters are converted to simplified, Taiwan
 spellings are normalised, missing end punctuation is added, and about 1,850
 pairs are corrected by hand -- a mistranslated English side, an unnatural or
-mistaken Chinese side, or Taiwan vocabulary replaced with mainland usage. A
-few pairs are removed. Every hand correction is listed, with the reason for
+mistaken Chinese side, or Taiwan vocabulary replaced with mainland usage. The
+names Tom (汤姆) and Mary (玛丽), which about 3,360 of the sentences use, are
+replaced throughout with Xiao Ming (小明) and Xiao Hong (小红), in the Chinese
+and in the English. A few pairs are removed. Every hand correction is listed, with the reason for
 it, in `tatoeba_corrections.tsv`; the source export is kept unmodified as
 `tatoeba_cmn_eng_source.tsv`.
 
