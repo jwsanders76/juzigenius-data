@@ -90,6 +90,15 @@ Mandarin–English sentence pairs from the [Tatoeba Project](https://tatoeba.org
 obtained via the [manythings.org/anki](https://www.manythings.org/anki/) export
 and filtered by `build_extra_sentences.py`.
 
+**The sentences are modified.** They are not served exactly as Tatoeba
+publishes them: traditional characters are converted to simplified, Taiwan
+spellings are normalised, missing end punctuation is added, and about 1,850
+pairs are corrected by hand -- a mistranslated English side, an unnatural or
+mistaken Chinese side, or Taiwan vocabulary replaced with mainland usage. A
+few pairs are removed. Every hand correction is listed, with the reason for
+it, in `tatoeba_corrections.tsv`; the source export is kept unmodified as
+`tatoeba_cmn_eng_source.tsv`.
+
 Tatoeba sentences are contributed by its members. Commercial use is permitted;
 **attribution is required**, which is why Tatoeba is credited on the in-app
 credits page and here.
