@@ -262,7 +262,6 @@ These generate vendored data but are not shipped or linked at runtime.
 |---|---|---|
 | [pypinyin](https://github.com/mozillazg/python-pinyin) | MIT | `pinyin_readings.json` |
 | [opencc-python-reimplemented](https://github.com/yichen0831/opencc-python) | Apache 2.0 | `char_script_map.json` |
-| [Piper](https://github.com/rhasspy/piper) | MIT | `speech_audio/` (see above) |
 
 OpenCC conversion tables (`STCharacters.txt`, `TWVariants.txt`,
 `HKVariants.txt`) are © [BYVoid](https://github.com/BYVoid/OpenCC) under the
