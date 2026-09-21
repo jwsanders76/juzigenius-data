@@ -1,7 +1,8 @@
 # juzigenius-data
 
-Stroke-order data for 9,531 Chinese characters, as used by
-[JuziGenius](https://juzigenius.com), published here so that it stays freely
+Stroke-order data for 9,531 Chinese characters, and a smaller set of 301
+character components, as used by [JuziGenius](https://juzigenius.com),
+published here so that it stays freely
 available to everyone under the **Arphic Public License**.
 
 ## What is here
@@ -10,6 +11,7 @@ available to everyone under the **Arphic Public License**.
 |---|---|
 | `stroke_data.json` | Stroke paths and medians for each character, one JSON object keyed by character. |
 | `stroke_data.index.json` | Byte offsets into `stroke_data.json`, so one character can be read without parsing the whole file. |
+| `component_strokes.json` | Strokes and medians for the 301 component forms JuziGenius's Character Components tool teaches — a further subset of `stroke_data.json`. |
 | `ARPHICPL.TXT` | The Arphic Public License. It must accompany the data wherever it goes. |
 | `THIRD-PARTY-LICENSES.md` | Attribution and provenance for all the third-party data JuziGenius uses. |
 
@@ -34,6 +36,11 @@ Modified by JuziGenius on 2026-09-13:
 Stroke paths, medians and glyph geometry are unaltered — only which characters
 are included and how they are packaged. The same notice is carried inside
 `stroke_data.json` itself, under its `_modifications` key.
+
+`component_strokes.json` was subsetted from that file on 2026-09-19, to the
+301 component forms, and reduced to the two fields Hanzi Writer reads
+(`strokes` and `medians`). No stroke path or median was altered. It carries
+its own `_modifications` key too.
 
 ## License
 
