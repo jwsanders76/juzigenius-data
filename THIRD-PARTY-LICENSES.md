@@ -214,6 +214,9 @@ the popup — and groups senses by reading, so 长 `cháng` "long" and 长 `zhǎ
 
 - Filtered to the ~18,100 headwords this application serves, out of 125,073
   (it was ~14,200 until the victory card's word list was added; see below).
+- Characters that are only a traditional form left out (56 entries, such as
+  礮, 絁 and 鑀, which CC-CEDICT lists in its simplified column too): this
+  application stores and serves simplified text, so none can be looked up.
 - Senses that are dictionary apparatus removed entirely: classifier notes
   (`CL:`), pronunciation notes (`Taiwan pr.`, `also pr.`, `colloquial pr.`),
   and `variant of` / `abbr. for` / `see` cross-references.
