@@ -248,6 +248,28 @@ unaffected, and charging for the app is permitted.
 The HSK levels themselves are published by Hanban / Chinese Testing
 International. The word lists are used here as reference data.
 
+## HSK 3.0 character lists — `hsk3_characters.json`
+
+**License: CC BY-SA 4.0.** Which level of the nine-level HSK each of 3,088
+characters belongs to, and the 1,200 of them the exam expects to be written by
+hand, as set out in the syllabus Chinese Testing International published in
+November 2025. The transcription is by Mani (krmanik),
+<https://github.com/krmanik/HSK-3.0>, folder "New HSK (2025)", distributed under
+the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
+**Commercial use is permitted.** Provenance, the commit and a checksum are in
+`hsk3_characters.LICENSE.txt`, and the file holds the notice in its own
+`_license` key so the terms travel with the data.
+
+**Changes made**, as the license requires stating: the source's
+one-character-per-line text files were joined into one string per level by
+`build_hsk3_characters.py`. No character was added, removed, reordered or moved
+between levels.
+
+Share-alike attaches to this data file, not to the application, on the same
+reasoning given for `glosses.json` above. It is kept as a file of its own, and
+nothing from it is copied into `master_dictionary.json`, so that it attaches to
+nothing else either; `test_hsk3.py` asserts that.
+
 ## Text-to-speech audio — removed
 
 **Resolved: no third-party audio is distributed.** Speech is synthesized on the
