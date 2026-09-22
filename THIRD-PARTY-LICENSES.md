@@ -248,7 +248,7 @@ unaffected, and charging for the app is permitted.
 The HSK levels themselves are published by Hanban / Chinese Testing
 International. The word lists are used here as reference data.
 
-## HSK 3.0 character lists — `hsk3_characters.json`
+## HSK 3.0 character and word lists — `hsk3_characters.json`, `hsk3_words.json`
 
 **License: CC BY-SA 4.0.** Which level of the nine-level HSK each of 3,088
 characters belongs to, and the 1,200 of them the exam expects to be written by
@@ -265,7 +265,15 @@ one-character-per-line text files were joined into one string per level by
 `build_hsk3_characters.py`. No character was added, removed, reordered or moved
 between levels.
 
-Share-alike attaches to this data file, not to the application, on the same
+**`hsk3_words.json`** is the same syllabus's word lists, 11,105 entries across
+the seven levels, from the same source and commit, under the same license, and
+copied unchanged — sense numbers, erhua spellings and parenthesised options as
+the syllabus writes them. Nothing in JuziGenius reads it; it is vendored here
+so that Vocabulary Builder's course is built from JuziGenius's inputs like
+everything else it uses, and so that the licence record for both files is in
+one place.
+
+Share-alike attaches to these data files, not to the application, on the same
 reasoning given for `glosses.json` above. It is kept as a file of its own, and
 nothing from it is copied into `master_dictionary.json`, so that it attaches to
 nothing else either; `test_hsk3.py` asserts that.
