@@ -92,8 +92,8 @@ and filtered by `build_extra_sentences.py`.
 
 **The sentences are modified.** They are not served exactly as Tatoeba
 publishes them: traditional characters are converted to simplified, Taiwan
-spellings are normalised, missing end punctuation is added, and about 2,250
-pairs are corrected by hand -- a mistranslated English side, an unnatural or
+spellings are normalised, missing end punctuation is added, and about 5,800
+pairs are corrected one by one -- a mistranslated English side, an unnatural or
 mistaken Chinese side, or Taiwan vocabulary replaced with mainland usage. The
 names Tom (汤姆) and Mary (玛丽), which about 3,360 of the sentences use, are
 replaced throughout with Xiao Ming (小明) and Xiao Hong (小红), in the Chinese
