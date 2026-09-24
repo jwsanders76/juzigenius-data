@@ -162,7 +162,8 @@ annotations were removed when the list was built (`build_words_freq.py`), and in
 September 2026 373 glosses were corrected by hand — raw dictionary markup,
 pronunciation notes, cross-references and self-referential senses removed, and a
 few emptied glosses given new definitions (`backfill_word_meanings.py` lists every
-change).
+change). In September 2026 the readings of 98 words were also corrected;
+`word_reading_corrections.json` lists each with its reason.
 
 ## Definitions — `glosses.json` and `cedict_source.txt.gz`
 
@@ -228,6 +229,10 @@ the popup — and groups senses by reading, so 长 `cháng` "long" and 长 `zhǎ
   and `derog.`, `coll.`, `lit.`, `fig.`, `esp.`, `usu.` written in full.
 - Numeric tone digits rewritten as tone marks (`yi1 qi3` → `yī qǐ`), matching
   the convention used everywhere else in this project.
+- Readings corrected in 332 entries where a review of every reading found them
+  wrong for the sense shown (a Taiwan reading, a neutral tone 现代汉语词典 gives,
+  a reading that belongs to another sense). Each is listed with its reason in
+  `cedict_reading_corrections.tsv`.
 - **`primary` is frequently not CC-CEDICT's text at all.** Where this project
   already had a readable gloss of its own it is kept unchanged, which covers
   every HSK 1–3 entry and the 373 glosses corrected by hand in September 2026.
