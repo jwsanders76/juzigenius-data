@@ -163,7 +163,10 @@ September 2026 373 glosses were corrected by hand — raw dictionary markup,
 pronunciation notes, cross-references and self-referential senses removed, and a
 few emptied glosses given new definitions (`backfill_word_meanings.py` lists every
 change). In September 2026 the readings of 98 words were also corrected;
-`word_reading_corrections.json` lists each with its reason.
+`word_reading_corrections.json` lists each with its reason. On September 25,
+2026, glosses that spelled out the word's own pinyin were reworded (胡同
+"hutong", 人民币 "Renminbi", 气功 "qigong", 糖葫芦 "tanghulu", 长江 "Chang
+Jiang", and the currency sense of 圆).
 
 ## Definitions — `glosses.json` and `cedict_source.txt.gz`
 
