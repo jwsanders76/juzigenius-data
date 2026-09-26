@@ -228,6 +228,14 @@ the popup — and groups senses by reading, so 长 `cháng` "long" and 长 `zhǎ
   "light; ray (CL:道)", "to confess (Taiwan pr.)".
 - Inline bracketed readings (`就是[jiu4 shi4]`) and traditional|simplified
   pairs (`個|个`) stripped from the remaining senses.
+- Lines of one headword that share a reading joined into one (269 lines):
+  CC-CEDICT gives a simplified headword one line per traditional form, so 你
+  arrived twice as `nǐ`, once from 你 and once from 妳. Every sense is kept,
+  each once.
+- Notes on how Taiwan writes or says a word removed, because this application
+  teaches mainland usage: 你's "(Note: In Taiwan, 妳 is used to address
+  females …)", "written 全球暖化 in Taiwan", "known as 地产大亨 in Taiwan";
+  and a sense tagged `(Tw, HK)` treated like one tagged `(Tw)`.
 - Lexicographic shorthand spelled out: `sb` → someone, `sth` → something,
   and `derog.`, `coll.`, `lit.`, `fig.`, `esp.`, `usu.` written in full.
 - Numeric tone digits rewritten as tone marks (`yi1 qi3` → `yī qǐ`), matching
