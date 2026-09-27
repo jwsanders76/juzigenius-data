@@ -94,7 +94,10 @@ and filtered by `build_extra_sentences.py`.
 publishes them: traditional characters are converted to simplified, Taiwan
 spellings are normalised, missing end punctuation is added, and about 5,800
 pairs are corrected one by one -- a mistranslated English side, an unnatural or
-mistaken Chinese side, or Taiwan vocabulary replaced with mainland usage. The
+mistaken Chinese side, or Taiwan vocabulary replaced with mainland usage (about
+490 more in a further review on September 27, 2026). The English is written in
+American spelling ("toward", "dreamed", "spilled") wherever the contributor used
+British. The
 names Tom (汤姆) and Mary (玛丽), which about 3,360 of the sentences use, are
 replaced throughout with Xiao Ming (小明) and Xiao Hong (小红), in the Chinese
 and in the English. A few pairs are removed. Every hand correction is listed, with the reason for
@@ -117,6 +120,10 @@ definition text follows the conventions of the **Unicode Han Database (Unihan)**
 `kDefinition` field, distributed under the
 [Unicode License](https://www.unicode.org/license.txt), which permits commercial
 use with attribution.
+
+Most of the definitions a learner sees are not Unihan's text: about 4,800
+characters have a meaning written by hand for this project
+(`meaning_overrides.json`), and the rest are written in American spelling.
 
 © 1991–present Unicode, Inc. All rights reserved.
 
@@ -166,7 +173,10 @@ change). In September 2026 the readings of 98 words were also corrected;
 `word_reading_corrections.json` lists each with its reason. On September 25,
 2026, glosses that spelled out the word's own pinyin were reworded (胡同
 "hutong", 人民币 "Renminbi", 气功 "qigong", 糖葫芦 "tanghulu", 长江 "Chang
-Jiang", and the currency sense of 圆).
+Jiang", and the currency sense of 圆). On September 27, 2026, a review of every gloss corrected about
+490 more: a rare or wrong sense in front of the everyday one (作为 "one's
+conduct", 团结 "a rally"), senses belonging to another reading of the word,
+glosses cut off mid-parenthesis, and British spelling.
 
 ## Definitions — `glosses.json` and `cedict_source.txt.gz`
 
@@ -246,15 +256,25 @@ the popup — and groups senses by reading, so 长 `cháng` "long" and 长 `zhǎ
   and `derog.`, `coll.`, `lit.`, `fig.`, `esp.`, `usu.` written in full.
 - Numeric tone digits rewritten as tone marks (`yi1 qi3` → `yī qǐ`), matching
   the convention used everywhere else in this project.
-- Readings corrected in 332 entries where a review of every reading found them
+- Readings corrected in 330 entries where a review of every reading found them
   wrong for the sense shown (a Taiwan reading, a neutral tone 现代汉语词典 gives,
   a reading that belongs to another sense). Each is listed with its reason in
   `cedict_reading_corrections.tsv`.
+- Individual senses corrected or removed where the September 27, 2026 review
+  of every popup entry found them wrong: a wrong fact (使馆 "consulate", 晚安
+  "good evening"), a sense filed under another reading or another character, a
+  vulgar or slur sense the rule above missed, a typo. About 340, each listed
+  with its reason in `sense_corrections.tsv`.
+- British spelling written as American ("toward", "gray", "check" for a bank
+  cheque), except in a sense that is about British usage itself.
 - **`primary` is frequently not CC-CEDICT's text at all.** Where this project
   already had a readable gloss of its own it is kept unchanged, which covers
   every HSK 1–3 entry and the 373 glosses corrected by hand in September 2026.
   A primary is taken from CC-CEDICT only for the 1,669 entries whose existing
-  gloss was too long to serve as a prompt.
+  gloss was too long to serve as a prompt. About 900 primaries were then
+  written by hand in the September 27, 2026 review, where CC-CEDICT's first
+  sense is not the everyday one (酒店 "wine shop", 可乐 "amusing"); they are
+  listed in `primary_overrides.json`.
 
 `test_glosses.py` asserts that no apparatus of any of these kinds survives
 into a sense a learner can read.
