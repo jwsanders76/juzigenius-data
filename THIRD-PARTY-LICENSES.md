@@ -236,6 +236,12 @@ the popup — and groups senses by reading, so 长 `cháng` "long" and 长 `zhǎ
   teaches mainland usage: 你's "(Note: In Taiwan, 妳 is used to address
   females …)", "written 全球暖化 in Taiwan", "known as 地产大亨 in Taiwan";
   and a sense tagged `(Tw, HK)` treated like one tagged `(Tw)`.
+- Vulgar, sexual and slang senses removed where the reading has another sense
+  (日 "(vulgar) to fuck", 鸡 "(slang) prostitute", 牛 "(slang) awesome"), and a
+  reading made only of such senses removed where the headword has another
+  (鸟 diǎo beside niǎo "bird"). A word whose only meaning is one of these
+  keeps it. The same rule is applied to the English glosses in the word list
+  (`words_freq.json`).
 - Lexicographic shorthand spelled out: `sb` → someone, `sth` → something,
   and `derog.`, `coll.`, `lit.`, `fig.`, `esp.`, `usu.` written in full.
 - Numeric tone digits rewritten as tone marks (`yi1 qi3` → `yī qǐ`), matching
