@@ -196,14 +196,16 @@ with the data, exactly as `words_freq.json` does.
 - **`segment_lexicon.json`** — the list of words the victory card may box as
   one unit, built by `build_segment_lexicon.py`: the CC-CEDICT headwords of two
   to six characters that occur in this application's sentences, plus its own
-  study lists, 11,156 words in all, each with a count taken from those
-  sentences. It carries no definitions (those stay in `glosses.json`), but the
+  study lists and those HSK 3.0 syllabus words it already listed, 11,013 words
+  in all (rebuilt September 27, 2026 from the reviewed sentences), each with a
+  count taken from those sentences. It carries no definitions (those stay in `glosses.json`), but the
   selection of headwords is drawn from CC-CEDICT, so it is distributed under
   the same license and holds the notice in its own `_license` key. **Changes
   made:** reduced to the headwords described above; about 290 entries that
   are phrases rather than words removed by hand (`NEVER_WORDS` in the build
-  script lists each one); headwords with no usable definition, and minor
-  place names, removed; definitions and readings dropped; counts added.
+  script lists each one); headwords with no usable definition, minor place
+  names and Taiwan-only forms removed; definitions and readings dropped; counts
+  added, with one word (到来) counted so that it is always grouped.
 
 - **`word_classes.json`** — which of the card's words are verbs
   (3,875) and which are adjectives (249), built by
@@ -226,7 +228,7 @@ the popup — and groups senses by reading, so 长 `cháng` "long" and 长 `zhǎ
 
 **Changes made**, as the license requires stating:
 
-- Filtered to the ~18,100 headwords this application serves, out of 125,073
+- Filtered to the ~17,800 headwords this application serves, out of 125,073
   (it was ~14,200 until the victory card's word list was added; see below).
 - Characters that are only a traditional form left out (56 entries, such as
   礮, 絁 and 鑀, which CC-CEDICT lists in its simplified column too): this
@@ -252,6 +254,12 @@ the popup — and groups senses by reading, so 长 `cháng` "long" and 长 `zhǎ
   (鸟 diǎo beside niǎo "bird"). A word whose only meaning is one of these
   keeps it. The same rule is applied to the English glosses in the word list
   (`words_freq.json`).
+- "Variant of" notes tidied (September 27, 2026): a note pointing at the
+  headword itself, left when a traditional form was folded in (和 "harmonious
+  (variant of 和)"), removed from its sense; a sense that is only a pointer to
+  another form ("unofficial variant of 瞭") removed where the reading has
+  another sense, and a reading made only of such pointers removed where the
+  headword has another reading (了 liào).
 - Lexicographic shorthand spelled out: `sb` → someone, `sth` → something,
   and `derog.`, `coll.`, `lit.`, `fig.`, `esp.`, `usu.` written in full.
 - Numeric tone digits rewritten as tone marks (`yi1 qi3` → `yī qǐ`), matching
@@ -263,7 +271,8 @@ the popup — and groups senses by reading, so 长 `cháng` "long" and 长 `zhǎ
 - Individual senses corrected or removed where the September 27, 2026 review
   of every popup entry found them wrong: a wrong fact (使馆 "consulate", 晚安
   "good evening"), a sense filed under another reading or another character, a
-  vulgar or slur sense the rule above missed, a typo. About 340, each listed
+  vulgar or slur sense the rule above missed, a typo, a literal rendering in
+  place of the meaning (手下留情). About 340, each listed
   with its reason in `sense_corrections.tsv`.
 - British spelling written as American ("toward", "gray", "check" for a bank
   cheque), except in a sense that is about British usage itself.
