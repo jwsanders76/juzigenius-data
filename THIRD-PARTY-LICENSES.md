@@ -356,11 +356,13 @@ These generate vendored data but are not shipped or linked at runtime.
 | Tool | License | Produces |
 |---|---|---|
 | [pypinyin](https://github.com/mozillazg/python-pinyin) | MIT | `pinyin_readings.json` |
-| [opencc-python-reimplemented](https://github.com/yichen0831/opencc-python) | Apache 2.0 | `char_script_map.json` |
+| [OpenCC](https://github.com/BYVoid/OpenCC) ver.1.4.2 | Apache 2.0 | `char_script_map.json`, `char_script_phrases.json` |
+| [opencc-python-reimplemented](https://github.com/yichen0831/opencc-python) | Apache 2.0 | `trad_to_simp.json` |
 
-OpenCC conversion tables (`STCharacters.txt`, `TWVariants.txt`,
-`HKVariants.txt`) are © [BYVoid](https://github.com/BYVoid/OpenCC) under the
-Apache License 2.0.
+OpenCC conversion tables (`STCharacters.txt`, `STPhrases.txt`,
+`TSCharacters.txt`, `TWVariants.txt`, `HKVariants.txt`) are ©
+[BYVoid](https://github.com/BYVoid/OpenCC) under the Apache License 2.0;
+opencc-python-reimplemented packages the same tables.
 
 ---
 
