@@ -329,14 +329,25 @@ reasoning given for `glosses.json` above. It is kept as a file of its own, and
 nothing from it is copied into `master_dictionary.json`, so that it attaches to
 nothing else either; `test_hsk3.py` asserts that.
 
-## Text-to-speech audio — removed
+## Text-to-speech audio
 
-**Resolved: no third-party audio is distributed.** Speech is synthesized on the
-user's own device by the browser's Web Speech API, using whichever Mandarin
-voices that device has installed. Nothing about that passes through this
-project, so no license attaches to it.
+**Pinyin & Tones serves pre-generated clips from
+[Google Cloud Text-to-Speech](https://cloud.google.com/text-to-speech)**, to
+invited testers since September 27, 2026. Every syllable-and-tone pair and
+two-syllable word it teaches is spoken by two WaveNet voices,
+`cmn-CN-Wavenet-A` (female) and `cmn-CN-Wavenet-C` (male), at full speed and
+at 0.7 speed: 8,176 MP3 files made by `tools/tts_syllables.py` in the Pinyin &
+Tones repository. They are synthesized speech, not recordings of people, and
+they are produced under, and their use governed by, Google Cloud's terms for
+that service. Sentence, word and character audio has also been generated with
+the same service for testing; none of it is served.
 
-There was previously a pre-generated path: ~700 MB of MP3s produced by
+Handwriting and Vocabulary Builder, and Pinyin & Tones whenever its clips
+cannot be reached, speak through the user's own device: the browser's Web
+Speech API, using whichever Mandarin voices that device has installed. Nothing
+about that passes through this project, so no license attaches to it.
+
+**Removed: Piper.** There was previously a pre-generated path: ~700 MB of MP3s produced by
 `build_speech_audio.py` with [Piper](https://github.com/rhasspy/piper) (MIT) and
 served from `/api/speech`. It was removed — from the app, the server and the
 host — because Piper's *engine* is MIT but its *voice models* are licensed
