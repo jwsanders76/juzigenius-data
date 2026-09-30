@@ -343,9 +343,10 @@ in a repository; they are copied to the host separately.
 | Tool | What is spoken | Clips | Made by |
 |---|---|---|---|
 | Pinyin & Tones | every syllable-and-tone pair and two-syllable word it teaches, at full speed and 0.7 speed | 8,176 | `tools/tts_syllables.py` in the Pinyin & Tones repository |
-| Vocabulary Builder | every word in its course, at full speed and 0.7 speed | 43,472 | `tools/tts_words.py` in the Vocabulary Builder repository |
+| Vocabulary Builder | every word in its course, at full speed and 0.7 speed | 43,580 | `tools/tts_words.py` in the Vocabulary Builder repository |
 | Handwriting | every sentence it serves (27,004), at full speed | 54,008 | `build_sentence_audio.py` |
 | Handwriting | every character in its dictionary, at full speed and 0.7 speed | 31,468 | `build_character_audio.py` |
+| Handwriting | the 164 words on its list that Vocabulary Builder's course does not have, at full speed and 0.7 speed | 656 | `build_word_audio.py` |
 
 Handwriting's word cards play Vocabulary Builder's clips for the words the two
 tools share. The same sentences were also generated in three of Google's
@@ -353,8 +354,8 @@ Chirp 3 HD voices for comparison; those are not served.
 
 Whatever has no clip is spoken through the user's own device instead: the
 browser's Web Speech API, using whichever Mandarin voices that device has
-installed. That covers text a learner adds themselves, the few words and
-characters with no clip, and every tool whenever its clips cannot be reached.
+installed. That covers text a learner adds themselves, and every tool
+whenever its clips cannot be reached.
 Nothing about that passes through this project, so no license attaches to it.
 
 **Removed: Piper.** There was previously a pre-generated path: ~700 MB of MP3s produced by
