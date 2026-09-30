@@ -331,21 +331,31 @@ nothing else either; `test_hsk3.py` asserts that.
 
 ## Text-to-speech audio
 
-**Pinyin & Tones serves pre-generated clips from
-[Google Cloud Text-to-Speech](https://cloud.google.com/text-to-speech)**, to
-invited testers since September 27, 2026. Every syllable-and-tone pair and
-two-syllable word it teaches is spoken by two WaveNet voices,
-`cmn-CN-Wavenet-A` (female) and `cmn-CN-Wavenet-C` (male), at full speed and
-at 0.7 speed: 8,176 MP3 files made by `tools/tts_syllables.py` in the Pinyin &
-Tones repository. They are synthesized speech, not recordings of people, and
-they are produced under, and their use governed by, Google Cloud's terms for
-that service. Sentence, word and character audio has also been generated with
-the same service for testing; none of it is served.
+**Handwriting, Pinyin & Tones and Vocabulary Builder serve pre-generated clips
+from [Google Cloud Text-to-Speech](https://cloud.google.com/text-to-speech)**,
+to invited testers: Pinyin & Tones since September 27, 2026, the other two
+since September 29, 2026. Everything is spoken by two WaveNet voices,
+`cmn-CN-Wavenet-A` (female) and `cmn-CN-Wavenet-C` (male). The clips are
+synthesized speech, not recordings of people, and they are produced under, and
+their use governed by, Google Cloud's terms for that service. None of them is
+in a repository; they are copied to the host separately.
 
-Handwriting and Vocabulary Builder, and Pinyin & Tones whenever its clips
-cannot be reached, speak through the user's own device: the browser's Web
-Speech API, using whichever Mandarin voices that device has installed. Nothing
-about that passes through this project, so no license attaches to it.
+| Tool | What is spoken | Clips | Made by |
+|---|---|---|---|
+| Pinyin & Tones | every syllable-and-tone pair and two-syllable word it teaches, at full speed and 0.7 speed | 8,176 | `tools/tts_syllables.py` in the Pinyin & Tones repository |
+| Vocabulary Builder | every word in its course, at full speed and 0.7 speed | 43,472 | `tools/tts_words.py` in the Vocabulary Builder repository |
+| Handwriting | every sentence it serves (27,004), at full speed | 54,008 | `build_sentence_audio.py` |
+| Handwriting | every character in its dictionary, at full speed and 0.7 speed | 31,468 | `build_character_audio.py` |
+
+Handwriting's word cards play Vocabulary Builder's clips for the words the two
+tools share. The same sentences were also generated in three of Google's
+Chirp 3 HD voices for comparison; those are not served.
+
+Whatever has no clip is spoken through the user's own device instead: the
+browser's Web Speech API, using whichever Mandarin voices that device has
+installed. That covers text a learner adds themselves, the few words and
+characters with no clip, and every tool whenever its clips cannot be reached.
+Nothing about that passes through this project, so no license attaches to it.
 
 **Removed: Piper.** There was previously a pre-generated path: ~700 MB of MP3s produced by
 `build_speech_audio.py` with [Piper](https://github.com/rhasspy/piper) (MIT) and
