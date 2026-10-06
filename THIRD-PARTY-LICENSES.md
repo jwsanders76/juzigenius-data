@@ -361,7 +361,8 @@ nothing else either; `test_hsk3.py` asserts that.
 from [Google Cloud Text-to-Speech](https://cloud.google.com/text-to-speech)**,
 to invited testers: Pinyin & Tones since September 27, 2026, the other two
 since September 29, 2026. Everything is spoken by two WaveNet voices,
-`cmn-CN-Wavenet-A` (female) and `cmn-CN-Wavenet-C` (male). The clips are
+`cmn-CN-Wavenet-D` (female; `cmn-CN-Wavenet-A` until October 5, 2026) and
+`cmn-CN-Wavenet-C` (male). The clips are
 synthesized speech, not recordings of people, and they are produced under, and
 their use governed by, Google Cloud's terms for that service. None of them is
 in a repository; they are copied to the host separately.
