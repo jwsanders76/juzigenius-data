@@ -126,7 +126,7 @@ American spelling ("toward", "dreamed", "spilled") wherever the contributor used
 British. The
 names Tom (汤姆) and Mary (玛丽), which about 3,360 of the sentences use, are
 replaced throughout with Xiao Ming (小明) and Xiao Hong (小红), in the Chinese
-and in the English. A few pairs are removed. Every hand correction is listed, with the reason for
+and in the English. A few pairs are removed. Every correction is listed, with the reason for
 it, in `tatoeba_corrections.tsv`; the source export is kept unmodified as
 `tatoeba_cmn_eng_source.tsv`.
 
@@ -136,8 +136,17 @@ credits page and here.
 
 `grammar_index.json` (built by `build_grammar_index.py`) repeats some of these
 sentences, Chinese side only, as the examples a Character Bank or Word Bank
-entry shows for a grammar pattern. It draws on nothing else, and the same
-terms and the same credit cover it.
+entry shows for a grammar pattern. It also draws on the HSK-table sentences
+and the sentences written for this project below; for the Tatoeba ones, the
+same terms and the same credit cover it.
+
+## Example sentences written for this project — `gap_sentences.csv`
+
+Not third-party material; listed so that this file accounts for every sentence
+the application serves. About 1,700 Mandarin–English pairs written for this
+project in September 2026, for HSK 1–6 characters and words that no Tatoeba or
+HSK-table sentence covers, then reviewed and corrected. `gap_sentences.tsv`
+records, for each one, what was written, what the review changed and why.
 
 ## Character dictionary — `hanzi_db.csv` → `master_dictionary.json`
 
@@ -148,7 +157,7 @@ definition text follows the conventions of the **Unicode Han Database (Unihan)**
 use with attribution.
 
 Most of the definitions a learner sees are not Unihan's text: about 4,800
-characters have a meaning written by hand for this project
+characters have a meaning written for this project
 (`meaning_overrides.json`), and the rest are written in American spelling.
 
 © 1991–present Unicode, Inc. All rights reserved.
@@ -164,7 +173,7 @@ with the data.
 Two sources:
 
 - **HSK 1–3 entries (ranks 1–611)** — compiled for this project alongside the
-  hand-written example sentences in `hsk_level1and2_words_with_sentences.csv` and
+  example sentences written for this project in `hsk_level1and2_words_with_sentences.csv` and
   `hsk_level3_words_with_sentences.csv`, and released under the same license so
   the file has a single set of terms.
 - **HSK 4–6 entries (ranks 612+)** — word lists via
@@ -192,7 +201,7 @@ The origin was confirmed from the data itself:
 
 **Changes made**, as the license requires stating: classifier (`CL:`)
 annotations were removed when the list was built (`build_words_freq.py`), and in
-September 2026 373 glosses were corrected by hand — raw dictionary markup,
+September 2026 373 glosses were corrected — raw dictionary markup,
 pronunciation notes, cross-references and self-referential senses removed, and a
 few emptied glosses given new definitions (`backfill_word_meanings.py` lists every
 change). In September 2026 the readings of 98 words were also corrected;
@@ -222,26 +231,27 @@ with the data, exactly as `words_freq.json` does.
 - **`segment_lexicon.json`** — the list of words the victory card may box as
   one unit, built by `build_segment_lexicon.py`: the CC-CEDICT headwords of two
   to six characters that occur in this application's sentences, plus its own
-  study lists and those HSK 3.0 syllabus words it already listed, 11,013 words
-  in all (rebuilt September 27, 2026 from the reviewed sentences), each with a
+  study lists and those HSK 3.0 syllabus words it already listed, 11,905 words
+  in all (rebuilt October 11, 2026), each with a
   count taken from those sentences. It carries no definitions (those stay in `glosses.json`), but the
   selection of headwords is drawn from CC-CEDICT, so it is distributed under
   the same license and holds the notice in its own `_license` key. **Changes
-  made:** reduced to the headwords described above; about 290 entries that
-  are phrases rather than words removed by hand (`NEVER_WORDS` in the build
+  made:** reduced to the headwords described above; about 320 entries that
+  are phrases rather than words removed (`NEVER_WORDS` in the build
   script lists each one); headwords with no usable definition, minor place
   names and Taiwan-only forms removed; definitions and readings dropped; counts
-  added, with one word (到来) counted so that it is always grouped.
+  added, with a few words (到来, 一会, 过多, 好比) counted so that they are
+  always grouped.
 
 - **`word_classes.json`** — which of the card's words are verbs
-  (3,875) and which are adjectives (249), built by
+  (4,063) and which are adjectives (282), built by
   `build_word_classes.py` for the grammar notes. The verbs are the headwords
   CC-CEDICT defines as "to …", checked against how each word behaves in this
   application's sentences; the adjectives come from those sentences alone.
   Because the verb list is drawn from CC-CEDICT's definitions it is
   distributed under the same license and holds the notice in its own
   `_license` key. **Changes made:** reduced to a bare list of headwords; no
-  definitions retained; about 180 headwords removed by hand
+  definitions retained; about 180 headwords removed
   (`NOT_VERBS` in the build script).
 
 **Why this was added (September 20, 2026).** One English string per word had
@@ -254,7 +264,7 @@ the popup — and groups senses by reading, so 长 `cháng` "long" and 长 `zhǎ
 
 **Changes made**, as the license requires stating:
 
-- Filtered to the ~17,800 headwords this application serves, out of 125,073
+- Filtered to the ~18,700 headwords this application serves, out of 125,073
   (it was ~14,200 until the victory card's word list was added; see below).
 - Characters that are only a traditional form left out (56 entries, such as
   礮, 絁 and 鑀, which CC-CEDICT lists in its simplified column too): this
@@ -304,10 +314,10 @@ the popup — and groups senses by reading, so 长 `cháng` "long" and 长 `zhǎ
   cheque), except in a sense that is about British usage itself.
 - **`primary` is frequently not CC-CEDICT's text at all.** Where this project
   already had a readable gloss of its own it is kept unchanged, which covers
-  every HSK 1–3 entry and the 373 glosses corrected by hand in September 2026.
+  every HSK 1–3 entry and the 373 glosses corrected in September 2026.
   A primary is taken from CC-CEDICT only for the 1,669 entries whose existing
   gloss was too long to serve as a prompt. About 900 primaries were then
-  written by hand in the September 27, 2026 review, where CC-CEDICT's first
+  rewritten in the September 27, 2026 review, where CC-CEDICT's first
   sense is not the everyday one (酒店 "wine shop", 可乐 "amusing"); they are
   listed in `primary_overrides.json`.
 
